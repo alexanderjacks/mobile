@@ -8,6 +8,7 @@ import {
   Text,
   TouchableOpacity,
   View,
+  Link
 } from 'react-native';
 
 import { MonoText } from '../components/StyledText';
@@ -24,8 +25,16 @@ export default function HomeScreen() {
           <Image
             source={
               __DEV__
-                ? require('../assets/images/Abigail.png')
-                : require('../assets/images/Abigail.png')
+                ? require('../assets/images/Farmer\'s_Lunch.png')
+                : require('../assets/images/Farmer\'s_Lunch.png')
+            }
+            style={styles.welcomeImage}
+          />
+          <Image
+            source={
+              __DEV__
+                ? require('../assets/images/Green_Tea.png')
+                : require('../assets/images/Green_Tea.png')
             }
             style={styles.welcomeImage}
           />
@@ -37,7 +46,7 @@ export default function HomeScreen() {
 
           <View
             style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
-            <MonoText>screens/HomeScreen.js</MonoText>
+            <MonoText>design & implement</MonoText>
           </View>
 
           <Text style={styles.getStartedText}>
@@ -48,7 +57,7 @@ export default function HomeScreen() {
         <View style={styles.helpContainer}>
           <TouchableOpacity onPress={handleHelpPress} style={styles.helpLink}>
             <Text style={styles.helpLinkText}>
-              Help, it didn’t automatically reload!
+              https://docs.expo.io/versions/latest/sdk/linear-gradient/
             </Text>
           </TouchableOpacity>
         </View>
@@ -112,7 +121,7 @@ function handleHelpPress() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#bff',
   },
   developmentModeText: {
     marginBottom: 20,
